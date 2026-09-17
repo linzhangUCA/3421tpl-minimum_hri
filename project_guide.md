@@ -9,7 +9,9 @@ In this project, we will build a bare minimum HRI using LED and tactile switch b
 
 ![hri_example](/assets/images/hri_example.gif)
 
-The main objective of this project is to practice advanced coding skills on the Raspberry Pi Pico 2 board.
+The main objectives of this project is to 
+- Practice advanced coding skills on the Raspberry Pi Pico 2 board.
+- Practice professional documentaion for engineering projects.
 
 ## 2. Get Started
 You may want to prepare following items for this project.
@@ -38,7 +40,7 @@ You may want to prepare following items for this project.
 ## 3. Requirements:
 
 ### 3.1. (15%) Circuit Design
-Wire up the Raspberry Pi Pico, LEDs and the button to deliver a **functional** circuit for the HRI.
+Wire up the Raspberry Pi Pico 2, LEDs and the button to deliver a **functional** circuit for the HRI.
 *You don't need to follow the circuit configured in the example [gif](/assets/images/hri_example.gif)*.
 - (10%) Draw a wiring diagram illustrating how all the components are connected to Pico's GPIO pins.
 Upload the wiring diagram to this repository.
@@ -52,6 +54,7 @@ Upload the wiring diagram to this repository.
 Program the Raspberry Pi Pico to: 
   - Encode the system's status into colors (`RED`, `GREEN`, `YELLOW`) using LEDs .
   - Switch the system's behavior between `WORK MODE` and `PAUSE MODE` by pressing a button.
+
 Please complete the following coding tasks to redeem your credits.
 You can use the [template](/minimum_hri.py) to get started or upload your own script.
 1. (5%) Initialization (System Check): blink all the LEDs at the same time **if the button's GPIO pin is receiving correct default signal** (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
