@@ -5,12 +5,12 @@
 
 ## Circuit Illustration
 ### Circuit Diagram
-> Display ciruit diagram below
 ![circuit_diagram](diagram_link)
+
 ### Actual Circuit Picture
 ![circuit_picture](picture_link)
 
 ## AI's Contribution
-> List and attribute AI's assistance below. 
+> List and attribute to AI's assistance below. 
 
 ## Debounc Cirtui Explained
