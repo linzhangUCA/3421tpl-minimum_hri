@@ -3,9 +3,11 @@
 > # Due: Thursday, Oct. 1st @ 5 PM
 
 ## Overview
-Human-Robot Interface (HRI) is widely used allowing humans to easily interact with robots (see an example of Roomba's HRI below). The fundamentals of an HRI include **displaying** a robot's status, and **responding** to human operations. In this project, we will build a bare minimum HRI using LED and tactile switch button.
+Human-Robot Interface (HRI) is widely used allowing humans to easily interact with robots. 
+The fundamentals of an HRI include **displaying** a robot's status, and **responding** to human operations. 
+In this project, we will build a bare minimum HRI using LED and tactile switch button as illustrated below.
 
-![roomba_hri](https://miro.medium.com/v2/resize:fit:640/format:webp/1*nLjM3CHVIxvbTAc3EuUpvg.gif)
+![hri_example](/assets/images/hri_example.gif)
 
 ## Requirements:
 
