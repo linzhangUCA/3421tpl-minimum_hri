@@ -35,49 +35,48 @@ You may want to prepare following items for this project.
 - [Thonny](https://thonny.org)
 - [MicroPython Firmware](https://micropython.org/download/RPI_PICO2/)
  
-## Requirements:
+## 3. Requirements:
 
-### 1 (15%) Circuit Design
-- (10%) Wire up the Raspberry Pi Pico, LEDs and the button to deliver a functional circuit for the HRI.
-- (3%) Make a debouncing circuit for the button.
-- (2%) Use a **common cathode** RGB LED.
-> [!TIP]
-> - Search online if any concepts are confused.
-> - Scavenge in robotics lab or ask Dr. Zhang's help if any parts are needed.
+### 3.1. (15%) Circuit Design
+Wire up the Raspberry Pi Pico, LEDs and the button to deliver a **functional** circuit for the HRI.
+*You don't need to follow the circuit configured in the example [gif](/assets/images/hri_example.gif)*.
+- (10%) Draw a wiring diagram illustrating how all the components are connected to Pico's GPIO pins.
+Upload the wiring diagram and display it in the [README](/README.md).
+- (5%) Upload a picture of your actual physical circuit and display it out in the [README](/README.md).
+- (+5% bonus) Make a reasonable debouncing circuit for the button.
 
-> [!IMPORTANT]
-> Redeem the credits by uploading images and display them in [Documentation](#circuit-design) below.
+> [!CAUTION]
+> No credit will be given if the components using different GPIO pins between the actual circuit and the wiring diagram.
 
-### 2 (65%) Coding
-- Program the Raspberry Pi Pico to: 
-    - Encode robot's status into colors (`RED`, `GREEN`, `BLUE`) using LEDs .
-    - Switch robot's behavior between `WORK MODE` and `PAUSE MODE` using a button.
-- Upload your script to this repository.
-- Complete following tasks:
-1. Initialization (System Check): blink all the LEDs at the same time if the button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
+### 3.2. (65%) Coding
+Program the Raspberry Pi Pico to: 
+  - Encode the system's status into colors (`RED`, `GREEN`, `YELLOW`) using LEDs .
+  - Switch the system's behavior between `WORK MODE` and `PAUSE MODE` by pressing a button.
+Please complete the following coding tasks to redeem your credits.
+1. (5%) Initialization (System Check): blink all the LEDs at the same time **if the button's GPIO pin is receiving correct default signal** (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
    - (4%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds.
-   - (1%) The robot enters `PAUSE MODE` after this step.
-2. When `PAUSE MODE` is activated:
+   - (1%) The system enters `PAUSE MODE` after this step.
+2. (20%) When `PAUSE MODE` is activated:
    - (10%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
-   - (10%) Press the button to **immediately** switch to the `WORK MODE`.
-3. When `WORK MODE` is activated:
+   - (10%) Press the button, the system **immediately** switch to the `WORK MODE` **at the moment the button is released**.
+3. (10%) When `WORK MODE` is activated:
    - (4%) `GREEN` LED stays constantly on.
-   - (6%) Press the button to **immediately** switch to the **PAUSE MODE**.
-4. Time `WORK MODE`.
-   - (15%) If the accumulated `WORK MODE` time exceeds 45 seconds, substitute `GREEN` LED with **`BLUE`** LED in both modes (low-battery simulation).
-   - (5%) If accumulated `WORK MODE` time over 55 seconds, blink `RED` LED (`BLUE` LED keep working) at frequency of 10 Hz.
-5. (10%) Termination. **Despite the mode**, trigger a [hard reset](https://docs.micropython.org/en/latest/wipy/tutorial/reset.html#reset-and-boot-modes) if:
-   - `RED` LED blinked 5 seconds
-   - button is **pressed and held** for 3 seconds. 
+   - (6%) Press the button, the system **immediately** switch to the `PAUSE MODE` **at the moment the button is released**.
+4. (20%) Time `WORK MODE`.
+   - (15%) If the accumulated `WORK MODE` time exceeds 40 seconds, substitute `GREEN` LED with **`YELLOW`** LED in both modes (low-battery simulation).
+   - (5%) If accumulated `WORK MODE` time over 50 seconds, blink `RED` LED at frequency of 10 Hz (`YELLOW` LED has to be functional under both modes).
+5. (10%) Termination. **Despite the mode**, put the Pico 2 board into **Deep Sleep** if:
+   - (10%) `RED` LED blinked 5 seconds (no matter)
+   - (+5% bonus) button is **pressed and held** for 3 seconds. 
+- (+2% bonus) Auto start the program whenever the Pico 2 board get powered up.
 
 > [!IMPORTANT]
-> - Mode switching is NOT a one-time function.
-> - After 55 seconds of `WORK`, the `BLUE` LED and the `RED` LED are suppose to be functional together in both modes.
+> No credits will be given to the mode switching part if the system can only switch mode once.
 
 > [!TIP]
 > - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
 > - `print()` function and Python Shell are handy tools.
-> - [global variables](https://realpython.com/python-use-global-variable-in-function/) are useful for interrup handling functions.
+> - [global variables](https://realpython.com/python-use-global-variable-in-function/) are useful for the callback functions.
 
 ### 3 (20%) Documentation
 **It is important to get an engineering project well documented.** 
