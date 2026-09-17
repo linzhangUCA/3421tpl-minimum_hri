@@ -13,4 +13,4 @@
 ## AI's Contribution
 > List and attribute to AI's assistance below. 
 
-## Debounc Cirtui Explained
+## Debounce Circuit Explained
