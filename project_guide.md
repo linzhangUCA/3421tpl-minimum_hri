@@ -2,13 +2,39 @@
 > [!IMPORTANT]
 > # Due: Thursday, Oct. 1st @ 5 PM
 
-## Overview
+## 1. Overview
 Human-Robot Interface (HRI) is widely used allowing humans to easily interact with robots. 
 The fundamentals of an HRI include **displaying** a robot's status, and **responding** to human operations. 
 In this project, we will build a bare minimum HRI using LED and tactile switch button as illustrated below.
 
 ![hri_example](/assets/images/hri_example.gif)
 
+The main objective of this project is to practice advanced coding skills on the Raspberry Pi Pico 2 board.
+
+## 2. Get Started
+You may want to prepare following items for this project.
+> [!NOTE]
+> These are just recommended setup.
+
+### 2.1. Hardware
+
+| Name                  | Qty. |
+|   :---                | ---: |
+| Raspberry Pi Pico 2   |  x1  |
+| Green LED             |  x1  |
+| Yellow LED            |  x1  |
+| Red LED               |  x1  |
+| 220 $\Omega$ Resistor |  x3  |
+| Tactile Button        |  x1  |
+| Jumper Wires          |  x?  |
+| Solderless Breadboard |  x1  |
+| Micro-USB Cable       |  x1  |
+| Computer              |  x1  |
+
+### 2.2. Software
+- [Thonny](https://thonny.org)
+- [MicroPython Firmware](https://micropython.org/download/RPI_PICO2/)
+ 
 ## Requirements:
 
 ### 1 (15%) Circuit Design
