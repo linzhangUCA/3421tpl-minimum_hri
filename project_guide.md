@@ -41,8 +41,8 @@ You may want to prepare following items for this project.
 Wire up the Raspberry Pi Pico, LEDs and the button to deliver a **functional** circuit for the HRI.
 *You don't need to follow the circuit configured in the example [gif](/assets/images/hri_example.gif)*.
 - (10%) Draw a wiring diagram illustrating how all the components are connected to Pico's GPIO pins.
-Upload the wiring diagram and display it in the [README](/README.md).
-- (5%) Upload a picture of your actual physical circuit and display it out in the [README](/README.md).
+Upload the wiring diagram to this repository.
+- (5%) Upload a picture of your actual physical circuit **without key connection gets obstructed** to this repository.
 - (+5% bonus) Make a reasonable debouncing circuit for the button.
 
 > [!CAUTION]
@@ -53,6 +53,7 @@ Program the Raspberry Pi Pico to:
   - Encode the system's status into colors (`RED`, `GREEN`, `YELLOW`) using LEDs .
   - Switch the system's behavior between `WORK MODE` and `PAUSE MODE` by pressing a button.
 Please complete the following coding tasks to redeem your credits.
+You can use the [template](/minimum_hri.py) to get started or upload your own script.
 1. (5%) Initialization (System Check): blink all the LEDs at the same time **if the button's GPIO pin is receiving correct default signal** (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
    - (4%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds.
    - (1%) The system enters `PAUSE MODE` after this step.
@@ -78,37 +79,36 @@ Please complete the following coding tasks to redeem your credits.
 > - `print()` function and Python Shell are handy tools.
 > - [global variables](https://realpython.com/python-use-global-variable-in-function/) are useful for the callback functions.
 
-### 3 (20%) Documentation
-**It is important to get an engineering project well documented.** 
-Complete the [Documentation](#documentation-student-work-) section below. 
-1. Illustrate circuit design
-   - (7%) Upload a [wiring diagram](https://projects-static.raspberrypi.org/projects/getting-started-with-the-pico/76943ea08b51e5f59937fcc4cec1d531fc013b6c/en/images/single_LED.png) or a circuit schematic (breadboard is optional) to this repository  and display it in the [Circuit Diagram](#circuit-diagram) section.
-   - (1%) Upload a picture to this repository to illustrate your physical setup. Display it in the [Wiring Picture](#wiring-picture) section.
-2. (10%) Explain how your debouncing circuit works using **math** language.
-   - Explain how button "pressing" is delayed. Use equation(s) to calculate delayed time.  
-   - Explain how button "releasing" is delayed. Use equation(s) to calculate delayed time.  
-4. (2%) (Within 80 words) Briefly propose a nice-to-have feature for an **HRI** with consideration of **safety**.
-   State why this feature will make the robot safer to the hardware/user/public/environment/etc..
+### 3.3. (20%) Documentation
+> [!IMPORTANT]
+> **Get your engineering projects well documented from now on.**
 
+Complete the documentation using [README](README.md). 
+- (12%) List components on your circuit in a Markdown table with 3 columns (`Name`, `Description`, `Quantity`).
+  - Describe the functionality of each item.
+  - Specify the exact number for each item.
+  - Do not include items not directly related to the circuit (e.g. computer).
 > [!TIP]
-> Please refer to [Github formatting guide](https://docs.github.com/en/get-started/writing-on-github).
+> You can use the table in this guide as a template.
 
+- (6%) Illustrate the circuit.
+   - (3%) Display a picture of your actual circuit in [README](README.md) with the resolution of 800 px. x 600 px for landscape layout. (600 px. x 800 px. for portrait layout).
+   - (3%) Display the wiring diagram with the resolution of 800 px. x 600 px for landscape layout. (600 px. x 800 px. for portrait layout).
+- (2%) Acknowledge AI's contributions.
+Please list out all the AI's contributions to this project.
+- (+25% bonus) Explain how the debouncing circuit works on the GPIO (if you had one) using **math** language.
+   - (+5% bonus) Explain how button "pressing" and "releasing" gets delayed with math equation(s) and numbers.   
+   - (+10% bonus) Plug in values from your actual circuit to calculate how long does the circuit delayed the "pressing" signal. 
+   - (+10% bonus) Plug in values from your actual circuit to calculate how long does the circuit delayed the "releasing" signal. 
+> [!TIP]
+> You need to figure out what type of logic level does RP2350 chip use and how it treats a certain voltage as the logic level.
 
-## Documentation (Student Work) 👇
+## 4. Resources
+- [pico-micropython-examples](https://github.com/raspberrypi/pico-micropython-examples)
+- [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
+- [Organizing information with tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
+- [Writing mathematical expressions](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
+- [Designing an RC debounce circuit](https://mayaposch.wordpress.com/2018/06/26/designing-an-rc-debounce-circuit/)
+- [Raspberry Pi Pico 2 Datasheet](https://pip.raspberrypi.com/documents/RP-008299-DS)
+- [Logic Level](https://en.wikipedia.org/wiki/Logic_level)
 
-### Circuit Design
-#### Circuit Diagram
-> Display ciruit diagram below
-
-![diagram name](diagram_link)
-
-#### Wiring Picture
-> Display an actual picture of your physical circuit below.
-
-![picture name](picture_link)
-
-#### Debouncing Circuit Explained
-> Write your analysis down below in **math** language. 
-
-### Safety Feature in Future
-> Write your considerations/solutions down below.
