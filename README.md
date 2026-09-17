@@ -1,5 +1,7 @@
 # Project 1: A Bare Minimum Human-Robot Interface (HRI)
-
+> [!IMPORTANT]
+> Please carefully read the [project guide](project_guide.md).
+ 
 ## Parts List
 > Plug in your Markdown table below
 
