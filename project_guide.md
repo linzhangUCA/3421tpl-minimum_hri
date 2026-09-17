@@ -56,7 +56,7 @@ Program the Raspberry Pi Pico to:
   - Switch the system's behavior between `WORK MODE` and `PAUSE MODE` by pressing a button.
 
 Please complete the following coding tasks to redeem your credits.
-You can use the [template](/minimum_hri.py) to get started or upload your own script.
+You can use the [template](/minimum_hri.py) script to get started or upload your own script.
 1. (5%) Initialization (System Check): blink all the LEDs at the same time **if the button's GPIO pin is receiving correct default signal** (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
    - (4%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds.
    - (1%) The system enters `PAUSE MODE` after this step.
