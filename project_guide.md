@@ -69,7 +69,7 @@ You can use the [template](/minimum_hri.py) script to get started or upload your
 4. (20%) Time `WORK MODE`.
    - (15%) If the accumulated `WORK MODE` time exceeds 40 seconds, substitute `GREEN` LED with **`YELLOW`** LED in both modes (low-battery simulation).
    - (5%) If accumulated `WORK MODE` time over 50 seconds, blink `RED` LED at frequency of 10 Hz (`YELLOW` LED has to be functional under both modes).
-5. (10%) Termination. **Despite the mode**, put the Pico 2 board into **Deep Sleep** if:
+5. (10%) Termination. **Despite the mode**, put the Pico 2 board into **Light Sleep** if:
    - (10%) `RED` LED blinked 5 seconds (no matter)
    - (+5% bonus) button is **pressed and held** for 3 seconds. 
 - (+2% bonus) Auto start the program whenever the Pico 2 board get powered up.
