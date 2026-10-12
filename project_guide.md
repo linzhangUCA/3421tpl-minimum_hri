@@ -57,9 +57,10 @@ Program the Raspberry Pi Pico to:
 
 Please complete the following coding tasks to redeem your credits.
 You can use the [template](/minimum_hri.py) script to get started or upload your own script.
-1. (5%) Initialization (System Check): blink all the LEDs at the same time **if the button's GPIO pin is receiving correct default signal** (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
-   - (4%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds.
-   - (1%) The system enters `PAUSE MODE` after this step.
+1. (5%) Initialization (System Check): blink all the LEDs at the same time **if the button's GPIO pin is receiving correct default signal** (`0` for `PULL_DOWN`, `1` for `PULL_UP`). 
+   - (2%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds.
+   - (1%) The system enters `PAUSE MODE` after the button signal check.
+   - (2%) The HRI should not be started if wrong button signal is received.
 2. (20%) When `PAUSE MODE` is activated:
    - (10%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
    - (10%) Press the button, the system **immediately** switch to the `WORK MODE` **at the moment the button is released**.
@@ -70,7 +71,7 @@ You can use the [template](/minimum_hri.py) script to get started or upload your
    - (15%) If the accumulated `WORK MODE` time exceeds 40 seconds, substitute `GREEN` LED with **`YELLOW`** LED in both modes (low-battery simulation).
    - (5%) If accumulated `WORK MODE` time over 50 seconds, blink `RED` LED at frequency of 10 Hz (`YELLOW` LED has to be functional under both modes).
 5. (10%) Termination. **Despite the mode**, put the Pico 2 board into **Light Sleep** if:
-   - (10%) `RED` LED blinked 5 seconds (no matter)
+   - (10%) `RED` LED blinked 5 seconds (despite of the work mode).
    - (+5% bonus) button is **pressed and held** for 3 seconds. 
 - (+2% bonus) Auto start the program whenever the Pico 2 board get powered up.
 
